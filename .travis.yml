@@ -4,11 +4,8 @@ python:
 
 services:
   - docker
-    #travis CI will trigger the docker image whenever a commit is made to the github
 
-  before_script: pip install docker-compose
-     #travis CI creates a temprorary server and install docker in it.
-  scripts:
-   - docker-compose run app sh -c "python manage.py test && flake8"
+before_script: pip install docker-compose
 
-
+script:
+  - docker-compose run --rm app sh -c "python manage.py test && flake8"
