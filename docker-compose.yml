@@ -1,7 +1,7 @@
 version: "3"
 
 services:
-  app: #d name of the service is "app"
+  recipee_pro: #d name of the service is "app"
     build: #a section under services where the cmd are configured
       context: . #the scope of the app services is the current dir where it lyes
     ports:
